@@ -2,12 +2,14 @@ server:
   port: 8082
 
 spring:
+  application:
+    name: configurar-servidor
   cloud:
     config:
       server:
         git:
           uri: https://github.com/FRNalexander/Microservicios.git
-          searchPaths: config-data
+          searchPaths: configurar-datos
           username: ${USER_GIT}
           password: ${PASSWORD_GIT}
 

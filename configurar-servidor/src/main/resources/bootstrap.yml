@@ -1,0 +1,17 @@
+server:
+  port: 8082
+
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/FRNalexander/Microservicos.git
+          searchPaths: config-data
+          username: ${USER_GIT}
+          password: ${PASSWORD_GIT}
+
+  security:
+    user:
+      name: root
+      password: s3cr3t

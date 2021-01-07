@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: servicio-cliente
+  profiles:
+    active: default
+  cloud:
+    config:
+      uri: http://localhost:8888
+      username: root
+      password: s3cr3t

@@ -35,11 +35,11 @@ spring:
             use_sql_comments: false
             format_sql: false
 
-    logging:
-      pattern:
-        console: "%d{yyyy-MM-dd HH_mm:ss} ${LOG_LEVEL_PATTERN_-%5p} %m%n"
-    
-    eureka:
-      client:
-        serviceUrl:
-          defaultZone: http://localhost:8099/eureka/
+logging:
+  pattern:
+    console: "%d{yyyy-MM-dd HH_mm:ss} ${LOG_LEVEL_PATTERN_-%5p} %m%n"
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8099/eureka/

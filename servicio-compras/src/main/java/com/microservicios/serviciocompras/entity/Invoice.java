@@ -1,6 +1,7 @@
 package com.microservicios.serviciocompras.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.microservicios.serviciocompras.modelo.Customer;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -29,8 +30,6 @@ public class Invoice {
     @Temporal(TemporalType.DATE)
     private Date createAt;
 
-
-
     @Valid
     @JsonIgnoreProperties({ "hibernateLazyInitializer", "handler" })
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
@@ -38,6 +37,9 @@ public class Invoice {
     private List<InvoiceItem> items;
 
     private String state;
+
+    @Transient
+    private Customer customer;
 
     public Invoice(){
         items = new ArrayList<>();
